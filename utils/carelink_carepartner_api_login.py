@@ -118,7 +118,7 @@ def do_captcha(url, redirect_url):
 							return (code, state)
 		sleep(0.1)
 
-def resolve_endpoint_config(discovery_url, is_us_region=False):
+def resolve_endpoint_config(discovery_url, is_us_region=True):
 	discover_resp = json.loads(requests.get(discovery_url).text)
 	sso_url = None
 
